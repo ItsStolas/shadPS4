@@ -5,6 +5,7 @@
 #include "core/libraries/error_codes.h"
 #include "core/libraries/libs.h"
 #include "core/libraries/system/savedatadialog.h"
+#include "core/libraries/system/commondialog.h"
 
 namespace Libraries::SaveDataDialog {
 
@@ -25,6 +26,26 @@ int PS4_SYSV_ABI sceSaveDataDialogGetStatus() {
 
 int PS4_SYSV_ABI sceSaveDataDialogInitialize() {
     LOG_ERROR(Lib_SaveDataDialog, "(STUBBED) called");
+
+    bool alreadyInit = false;
+    //is dialog init already?
+    if (alreadyInit) {
+        // is another dialog init?
+        bool isCommonUsed = Libraries::CommonDialog::sceCommonDialogIsUsed();
+        if (!isCommonUsed) {
+            // new up something
+            //int a = Libraries::CommonDialog::_ZN3sce16CommonDialogUtil12getSelfAppIdEv();
+
+
+
+        } else {
+            return ORBIS_COMMON_DIALOG_ERROR_BUSY;
+        }
+    }
+    else {
+        return ORBIS_COMMON_DIALOG_ERROR_ALREADY_INITIALIZED;
+    }
+
     return ORBIS_OK;
 }
 

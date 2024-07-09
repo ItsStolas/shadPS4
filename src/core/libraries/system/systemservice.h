@@ -182,7 +182,7 @@ int PS4_SYSV_ABI sceLncUtilSetCdlgExec();
 int PS4_SYSV_ABI sceLncUtilSetControllerFocus();
 int PS4_SYSV_ABI sceLncUtilSetControllerFocusPermission();
 int PS4_SYSV_ABI sceLncUtilStartKillApp();
-int PS4_SYSV_ABI sceLncUtilStartLaunchAppByTitleId();
+int PS4_SYSV_ABI sceLncUtilStartLaunchAppByTitleId(char* param_1, char** param_2, long param_3, long param_4);
 int PS4_SYSV_ABI sceLncUtilSuspendApp();
 int PS4_SYSV_ABI sceLncUtilSuspendBackgroundApp();
 int PS4_SYSV_ABI sceLncUtilSuspendLocalProcess();

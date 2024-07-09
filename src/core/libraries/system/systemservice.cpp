@@ -405,8 +405,12 @@ int PS4_SYSV_ABI sceLncUtilStartKillApp() {
     return ORBIS_OK;
 }
 
-int PS4_SYSV_ABI sceLncUtilStartLaunchAppByTitleId() {
+int PS4_SYSV_ABI sceLncUtilStartLaunchAppByTitleId(char* param_1, char** param_2, long param_3,
+                                                   long param_4) {
     LOG_ERROR(Lib_SystemService, "(STUBBED) called");
+
+
+
     return ORBIS_OK;
 }
 
